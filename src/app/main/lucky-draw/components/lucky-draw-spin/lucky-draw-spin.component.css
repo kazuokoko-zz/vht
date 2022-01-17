@@ -1,0 +1,246 @@
+.bg-img{
+  width: 100%;
+  height: 100%;
+  animation: opacityButton ease-in 0.3s;
+}
+.logo{
+  position: absolute;
+  height: 4.04%;
+  left: 38.67%;
+  top: 23.64%;
+  animation: opacityButton ease-in 0.3s;
+}
+.title{
+  position: absolute;
+  height: 12.3%;
+  left: 11.2%;
+  top: 30.6%;
+  animation: opacityButton ease-in 0.3s;
+}
+.title-text{
+  position: absolute;
+  width: 59.53%;
+  height: 3.81%;
+  left: 21%;
+  top: 35%;
+  font-family: FS Magistral;
+  font-weight: bold;
+  font-size: 6.2vw;
+  line-height: 31px;
+  text-overflow: unset;
+  color: #541717;
+  background-color: transparent;
+  border: none;
+  animation: opacityButton ease-in 0.3s;
+}
+@media screen and (min-width: 1100px) {
+  .title-text {
+    font-size: 20px;
+  }
+}
+.button {
+  position: absolute;
+  width: 49%;
+  height: 22.66%;
+  left: 25.6%;
+  top: 45.935%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  transition: transform ease-in 0.2s, box-shadow ease-in 0.25s;
+  animation: opacityButton ease-in 0.3s;
+}
+
+@keyframes opacityButton {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button:active{
+  transform: scale(0.9);
+}
+
+.button-disable {
+  position: absolute;
+  width: 49%;
+  height: 22.66%;
+  left: 25.6%;
+  top: 45.935%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  opacity: 0.5;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+}
+
+.button-img{
+  width: 100%;
+  height: 100%;
+}
+
+.button-title{
+  position: absolute;
+  left:23%;
+  top:33%;
+  font-family: FS Magistral;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 9vw;
+  line-height: 50px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 375px) {
+  .button-title {
+    top:36%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button-title {
+    font-size: 2.2vw;
+    top:33%;
+  }
+  .title-text {
+    top:34.5%
+  }
+}
+
+.firework {
+  position: absolute;
+  width: 18.67%;
+  transform: scale(0);
+  transition: all ease-in-out 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+}
+
+
+
+.firework-animation {
+  animation: fireworkInOut ease-in-out 2s;
+  -webkit-animation: fireworkInOut ease-in-out 2s;
+}
+
+@keyframes fireworkInOut {
+  0% {
+    transform: scale(0);
+    display: block;
+  }
+  50% {
+    transform: scale(1);
+  }
+  75%{
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fireworkInOut {
+  0% {
+    -webkit-transform: scale(0);
+    -webkit-display: block;
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  75%{
+    -webkit-transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -webkit-opacity: 0;
+  }
+}
+.hidden-video {
+  display:none;
+}
+
+/* -------------------------------- */
+.fullscreen-video{
+  width: 100%;
+  height: 100%;
+  animation: opacityButton ease-in 0.3s;
+}
+
+.button-prize{
+  position: absolute;
+  width: 66.67%;
+  height: 6.7%;
+  left: 17.6%;
+  top: 84.81%;
+  background-color: transparent;
+  border: none;
+  transition: all ease-in 0.2s;
+  animation: opacityButton ease-in 0.3s;
+}
+
+@keyframes opacityButton {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.button-prize:active{
+  transform: scale(0.9);
+}
+
+.button-layout-1-prize {
+  position: absolute;
+  width: 96.5%;
+  height: 85.71%;
+  left: 2%;
+  top: 7%;
+
+  background: linear-gradient(180deg, #FFFEFD -21.88%, #FFAF13 100%);
+  border-radius: 24px;
+  z-index: 100;
+}
+
+.button-layout-2-prize {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+
+  background: linear-gradient(180deg, #FFAF13 0%, #FFFFFF 141.96%);
+  border-radius: 68px;
+}
+
+.button-title-prize{
+  position: absolute;
+  font-family: FS Magistral;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 6vw;
+  line-height: 27px;
+  color: #541717;
+  top: 9%;
+  left: 24%;
+}
+
+@media screen and (min-height: 800px) {
+  .button-title-prize {
+    top:13%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button-title-prize {
+    font-size: 1.4vw;
+  }
+}

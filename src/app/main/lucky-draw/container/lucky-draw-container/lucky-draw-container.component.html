@@ -1,0 +1,4 @@
+<app-lucky-draw-home *ngIf="homeStatus" (isButtonClick)="onClickComfirm($event)" [errorType]="errorType">
+</app-lucky-draw-home>
+<app-lucky-draw-spin *ngIf="spinStatus" [isRewarded]="wishStatus" [prize]="prize"></app-lucky-draw-spin>
+<!-- <app-lucky-draw-prize *ngIf="prizeStatus" [isButtonClick]="wishStatus" [prize]="prize"></app-lucky-draw-prize> -->

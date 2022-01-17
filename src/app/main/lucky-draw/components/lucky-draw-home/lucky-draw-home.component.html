@@ -1,0 +1,24 @@
+<div class="container-fluid animate">
+  <div class="row" style="height: 100vh;justify-content: center;">
+    <div class="col-xl-3 col-12" style="text-align: center;padding: 0;">
+      <img class="bg-img" src="../../../../../assets/BG - 1.png" alt="">
+      <img class="logo" src="../../../../../assets/logo.png">
+      <img class="title" src="../../../../../assets/Frame@4x 2.png">
+      <input type="text" name="employeeCode" maxlength="15" [(ngModel)]="employeeCode" class="title-input"
+        placeholder="Nhập mã nhân viên" (keypress)="_keyUp($event)" (focus)="scroll()">
+      <div class="error-text">
+        <p *ngIf="errorType == 0">Lỗi hệ thống</p>
+        <p *ngIf="errorType == -2">Mã nhân viên không đúng</p>
+        <p *ngIf="errorType == -3">Đã hết thời gian nhận lì xì</p>
+        <p *ngIf="errorType == -4">Chưa đến thời gian nhận lì xì</p>
+      </div>
+      <button class="button bubbly-button" (click)="onClick()">
+        <div class="button-layout-1">
+          <span class="button-title">Xác nhận</span>
+        </div>
+        <div class="button-layout-2"></div>
+        <div class="button-layout-3"></div>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="row" style="height: 100vh;justify-content: center;">
+    <div class="col-xl-3 col-12" style="text-align: center;padding: 0; background-color: #AA0707;">
+      <div class="fullscreen-video" [ngClass]="!isButtonClick ? '' :'hidden-video'">
+        <video class="fullscreen-video" #video1 [ngClass]="prize==1 ?'':'hidden-video'" id="myVideo1" loop playsinline
+          webkit-playsinline>
+          <source src="../../../../../assets/Trung GIAI DAC BIET.mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video class="fullscreen-video" #video2 [ngClass]="prize==2 ?'':'hidden-video'" id="myVideo2" loop playsinline
+          webkit-playsinline>
+          <source src="../../../../../assets/Trung GIAI NHAT.mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video class="fullscreen-video" #video3 [ngClass]="prize==3 ?'':'hidden-video'" id="myVideo3" loop playsinline
+          webkit-playsinline>
+          <source src="../../../../../assets/Trung GIAI NHI.mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video class="fullscreen-video" #video4 [ngClass]="prize==4 ?'':'hidden-video'" id="myVideo4" loop playsinline
+          webkit-playsinline>
+          <source src="../../../../../assets/Trung GIAI BA.mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video class="fullscreen-video" #video5 [ngClass]="prize==5 ?'':'hidden-video'" id="myVideo5" loop playsinline
+          webkit-playsinline>
+          <source src="../../../../../assets/Trung GIAI KHUC KHICH.mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- <video [ngClass]="!isButtonClick ? '' :'hidden-video'" #trunggiai class="fullscreen-video" id="myVideo1" loop
+        playsinline webkit-playsinline>
+        <source *ngIf="prize==1" src="../../../../../assets/Trung GIAI DAC BIET.mp4">
+        <source *ngIf="prize==2" src="../../../../../assets/Trung GIAI NHAT.mp4">
+        <source *ngIf="prize==3" src="../../../../../assets/Trung GIAI NHI.mp4">
+        <source *ngIf="prize==4" src="../../../../../assets/Trung GIAI BA.mp4">
+        <source *ngIf="prize==5" src="../../../../../assets/Trung GIAI KHUC KHICH.mp4">
+        Your browser does not support the video tag.
+      </video> -->
+      <video [ngClass]="isButtonClick ? '' :'hidden-video'" #chucmung class="fullscreen-video" id="myVideo" loop
+        playsinline webkit-playsinline>
+        <source src="../../../../../assets/CHUC MUNG NAM MOI.mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <button class="button" *ngIf="showButton && !isButtonClick" (click)="onClick()">
+        <div class="button-layout-1"><span class="button-title">Nhận thưởng</span></div>
+        <div class="button-layout-2"></div>
+      </button>
+    </div>
+  </div>
+</div>

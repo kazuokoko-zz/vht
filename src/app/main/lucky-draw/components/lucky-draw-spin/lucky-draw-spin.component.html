@@ -1,0 +1,76 @@
+<div class="container-fluid animate">
+  <div class="row" style="height: 100vh;justify-content: center;">
+    <div class="col-xl-3 col-12" style="text-align: center;padding: 0; background-color: #AA0707;">
+      <div [ngClass]="checkSpin() ? '' :'hidden-video'">
+        <img class="bg-img" src="../../../../../assets/BG - 2.png" alt="">
+        <img class="logo" src="../../../../../assets/logo.png">
+        <img class="title" src="../../../../../assets/Frame@4x 2.png">
+        <video class="title-text" [ngClass]="spin ?'':'hidden-video'" #video id="myVideo" loop playsinline
+          webkit-playsinline>
+          <source src="../../../../../assets/Number_TONG-HOP_-Final.mp4">
+          Your browser does not support the video tag.
+        </video>
+        <img class="firework" [ngClass]="animationButton ? 'firework-animation':''"
+          style="top: 44%;left: 73%;transform-origin: center center" src="../../../../../assets/firework2.png">
+
+        <img class="firework" [ngClass]="animationButton ? 'firework-animation':''"
+          style="top: 57%;left: 75%;transform-origin: center bottom;" src="../../../../../assets/firework1.png">
+
+        <img class="firework" [ngClass]="animationButton ? 'firework-animation':''"
+          style="top: 57%;left: 7%;transform-origin: center bottom;" src="../../../../../assets/firework4.png">
+
+        <img class="firework" [ngClass]="animationButton ? 'firework-animation':''"
+          style="top: 45%;left: 8%;transform-origin: center center;" src="../../../../../assets/firework3.png">
+        <!-- End quay so -->
+
+        <button *ngIf="!spin" class="button" (click)="onClick()">
+          <img class="button-img" src="../../../../../assets/Quay@4x 1.png">
+          <span class="button-title">QUAY</span>
+        </button>
+        <button *ngIf="spin" class="button-disable">
+          <img class="button-img" src="../../../../../assets/Quay@4x 1.png">
+          <span class="button-title">QUAY</span>
+        </button>
+      </div>
+
+      <!-- Video giải thưởng -->
+      <div class="fullscreen-video" [ngClass]="checkReward() ? '' :'hidden-video'">
+        <video class="fullscreen-video" #video1 [ngClass]="prize==1 ?'':'hidden-video'" id="myVideo1" loop playsinline
+          webkit-playsinline>
+          <source src="../../../../../assets/Trung GIAI DAC BIET.mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video class="fullscreen-video" #video2 [ngClass]="prize==2 ?'':'hidden-video'" id="myVideo2" loop playsinline
+          webkit-playsinline>
+          <source src="../../../../../assets/Trung GIAI NHAT.mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video class="fullscreen-video" #video3 [ngClass]="prize==3 ?'':'hidden-video'" id="myVideo3" loop playsinline
+          webkit-playsinline>
+          <source src="../../../../../assets/Trung GIAI NHI.mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video class="fullscreen-video" #video4 [ngClass]="prize==4 ?'':'hidden-video'" id="myVideo4" loop playsinline
+          webkit-playsinline>
+          <source src="../../../../../assets/Trung GIAI BA.mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video class="fullscreen-video" #video5 [ngClass]="prize==5 ?'':'hidden-video'" id="myVideo5" loop playsinline
+          webkit-playsinline>
+          <source src="../../../../../assets/Trung GIAI KHUC KHICH.mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <video [ngClass]="isRewarded ? '' :'hidden-video'" #chucmung class="fullscreen-video" id="myVideo" loop
+        playsinline webkit-playsinline>
+        <source src="../../../../../assets/CHUC MUNG NAM MOI.mp4">
+        Your browser does not support the video tag.
+      </video>
+      <button class="button-prize" *ngIf="checkButtonReward()" (click)="playWish()">
+        <div class="button-layout-1-prize"><span class="button-title-prize">Nhận thưởng</span></div>
+        <div class="button-layout-2-prize"></div>
+      </button>
+    </div>
+    <!-- End video giải thưởng-->
+  </div>
+</div>
